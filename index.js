@@ -45,7 +45,7 @@ function displayweatherInfo(data){
   card.textContent="";
   card.style.display = "flex";
 
-    const cityDiaplay = document.createElement("h1");
+    const cityDisplay = document.createElement("h1");
     const humidityDisplay = document.createElement("p");
     const descDisplay = document.createElement("p");
     const tempDisplay = document.createElement("p");
@@ -66,14 +66,14 @@ function displayweatherInfo(data){
 
 
 
-    cityDiaplay.textContent = city;
+    cityDisplay.textContent = city;
     tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
     humidityDisplay.textContent = `Humidity:${humidity}`;
     descDisplay.textContent = description;
     weatherEmoji.textContent = getWeatherEmoji(id);
     timezone.textContent = `Local Time : ${formatTime(localDate)} (GMT${timezoneOffset/3600>=0?'+' : ''}${timezoneOffset/3600})`;
     
-    cityDiaplay.classList.add("cityDisplay");
+    cityDisplay.classList.add("cityDisplay");
     tempDisplay.classList.add("tempDisplay");
     humidityDisplay.classList.add("windspeed");
     descDisplay.classList.add("descDisplay");
@@ -82,7 +82,7 @@ function displayweatherInfo(data){
     
 
 
-    card.appendChild(cityDiaplay);
+    card.appendChild(cityDisplay);
     card.appendChild(tempDisplay);
     card.appendChild(humidityDisplay);
     card.appendChild(descDisplay);
